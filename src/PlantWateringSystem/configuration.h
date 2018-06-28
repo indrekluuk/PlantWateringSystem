@@ -1,0 +1,14 @@
+//
+// Created by indrek on 28.06.2018.
+//
+
+#ifndef PLANTWATERINGSYSTEM_CONFIGURATION_H
+#define PLANTWATERINGSYSTEM_CONFIGURATION_H
+
+
+const int TFT_CS = 9;
+const int TFT_RS = 8;
+const int TFT_RST = 10;
+const int TFT_BACK_LIGHT = 7;
+
+#endif //PLANTWATERINGSYSTEM_CONFIGURATION_H

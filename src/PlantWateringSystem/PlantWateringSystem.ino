@@ -1,4 +1,7 @@
 #include "Arduino.h"
+#include "WateringMain.h"
+
+
 
 
 void setup() {
@@ -8,6 +11,9 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-
+    WateringMain main;
+    while(true) {
+        main.run();
+    }
 }
 
