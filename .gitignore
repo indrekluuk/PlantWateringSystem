@@ -7,4 +7,5 @@ src/.gitignore
 src/.travis.yml
 src/CMakeLists.txt
 src/CMakeListsPrivate.txt
+pcb/*.zip
 /cmake-build-debug/
