@@ -11,9 +11,9 @@
 
 class Screen {
 
+public:
     Adafruit_ST7735 tft;
 
-public:
     Screen();
 
     void setBackLight(bool isOn);

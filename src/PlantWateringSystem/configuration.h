@@ -6,9 +6,15 @@
 #define PLANTWATERINGSYSTEM_CONFIGURATION_H
 
 
-const int TFT_CS = 9;
-const int TFT_RS = 8;
-const int TFT_RST = 10;
-const int TFT_BACK_LIGHT = 7;
+const int TFT_PIN_CS = 9;
+const int TFT_PIN_RS = 8;
+const int TFT_PIN_RST = 10;
+const int TFT_PIN_BACK_LIGHT = 7;
+
+const int BUTTON_PIN_ROT_1 = A1;
+const int BUTTON_PIN_ROT_2 = A0;
+const int BUTTON_PIN_PUSH = 2;
+
+
 
 #endif //PLANTWATERINGSYSTEM_CONFIGURATION_H

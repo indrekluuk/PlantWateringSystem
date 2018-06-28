@@ -7,12 +7,14 @@
 
 
 #include "Screen.h"
+#include "Button.h"
 
 
 class WateringMain {
 
 
     Screen screen;
+    Button button;
 
 public:
     WateringMain();

@@ -7,21 +7,20 @@
 
 
 Screen::Screen() :
-    tft(TFT_CS, TFT_RS, TFT_RST)
+    tft(TFT_PIN_CS, TFT_PIN_RS, TFT_PIN_RST)
 {
   tft.initR(INITR_BLACKTAB);
   tft.setRotation(1);
 
-  pinMode(TFT_BACK_LIGHT, OUTPUT);
+  pinMode(TFT_PIN_BACK_LIGHT, OUTPUT);
   setBackLight(true);
 
-  tft.fillScreen(ST7735_GREEN);
-
+  tft.fillScreen(ST7735_BLACK);
 }
 
 
 void Screen::setBackLight(bool isOn) {
-  digitalWrite(TFT_BACK_LIGHT, isOn);
+  digitalWrite(TFT_PIN_BACK_LIGHT, isOn);
 }
 
 
