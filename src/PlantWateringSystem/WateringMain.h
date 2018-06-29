@@ -8,17 +8,14 @@
 
 #include "Screen.h"
 #include "Button.h"
-#include "MoistureSensors.h"
-#include "Coils.h"
+#include "BottleConnectors.h"
 
 
 class WateringMain {
 
-
     Screen screen;
     Button button;
-    MoistureSensors moistureSensors;
-    Coils coils;
+    BottleConnectors bottleConnectors;
 
 public:
     WateringMain();

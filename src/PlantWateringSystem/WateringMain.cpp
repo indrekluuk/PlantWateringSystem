@@ -19,6 +19,8 @@ void WateringMain::run() {
   int rot = button.getRotation();
   if (rot) {
     v+=rot;
+    if (v < 0) v = 0;
+    if (v >= bottleConnectors.CONNECTOR_COUNT) v = bottleConnectors.CONNECTOR_COUNT-1;
     screen.tft.fillScreen(ST7735_BLACK);
     screen.tft.setCursor(0,0);
     screen.tft.println(v);
@@ -31,13 +33,13 @@ void WateringMain::run() {
       screen.tft.fillScreen(ST7735_GREEN);
       screen.tft.setCursor(0,0);
       screen.tft.println(v);
-      coils.switchCoil(0, true);
+      bottleConnectors.switchCoil(v, true);
       break;
     case BUTTON_RELEASE:
       screen.tft.fillScreen(ST7735_RED);
       screen.tft.setCursor(0,0);
       screen.tft.println(v);
-      coils.switchCoil(0, false);
+      bottleConnectors.switchCoil(v, false);
       break;
   }
 
@@ -47,19 +49,19 @@ void WateringMain::run() {
     screen.tft.setTextColor(ST7735_WHITE, ST7735_BLACK);
 
     screen.tft.setCursor(0,50);
-    screen.tft.print(moistureSensors.read(0));
+    screen.tft.print(bottleConnectors.readSensor(0));
     screen.tft.print("     ");
 
     screen.tft.setCursor(0,60);
-    screen.tft.print(moistureSensors.read(1));
+    screen.tft.print(bottleConnectors.readSensor(1));
     screen.tft.print("     ");
 
     screen.tft.setCursor(0,70);
-    screen.tft.print(moistureSensors.read(2));
+    screen.tft.print(bottleConnectors.readSensor(2));
     screen.tft.print("     ");
 
     screen.tft.setCursor(0,80);
-    screen.tft.print(moistureSensors.read(3));
+    screen.tft.print(bottleConnectors.readSensor(3));
     screen.tft.print("     ");
   }
 
