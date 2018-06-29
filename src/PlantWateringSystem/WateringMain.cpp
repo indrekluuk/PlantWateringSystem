@@ -11,6 +11,8 @@ WateringMain::WateringMain() {
 }
 
 int v = 0;
+uint32_t t = 0;
+
 void WateringMain::run() {
 
 
@@ -35,6 +37,28 @@ void WateringMain::run() {
       screen.tft.setCursor(0,0);
       screen.tft.println(v);
       break;
+  }
+
+
+  if (millis() - t > 1000) {
+    t = millis();
+    screen.tft.setTextColor(ST7735_WHITE, ST7735_BLACK);
+
+    screen.tft.setCursor(0,50);
+    screen.tft.print(moistureSensors.read(0));
+    screen.tft.print("     ");
+
+    screen.tft.setCursor(0,60);
+    screen.tft.print(moistureSensors.read(1));
+    screen.tft.print("     ");
+
+    screen.tft.setCursor(0,70);
+    screen.tft.print(moistureSensors.read(2));
+    screen.tft.print("     ");
+
+    screen.tft.setCursor(0,80);
+    screen.tft.print(moistureSensors.read(3));
+    screen.tft.print("     ");
   }
 
 }
