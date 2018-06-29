@@ -31,11 +31,13 @@ void WateringMain::run() {
       screen.tft.fillScreen(ST7735_GREEN);
       screen.tft.setCursor(0,0);
       screen.tft.println(v);
+      coils.switchCoil(0, true);
       break;
     case BUTTON_RELEASE:
       screen.tft.fillScreen(ST7735_RED);
       screen.tft.setCursor(0,0);
       screen.tft.println(v);
+      coils.switchCoil(0, false);
       break;
   }
 

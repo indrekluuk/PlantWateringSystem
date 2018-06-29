@@ -24,5 +24,10 @@ const int SENSOR_PIN_2 = A5;
 const int SENSOR_PIN_3 = A6;
 const int SENSOR_PIN_4 = A7;
 
+const int COIL_PIN_1 = 3;
+const int COIL_PIN_2 = 4;
+const int COIL_PIN_3 = 5;
+const int COIL_PIN_4 = 6;
+
 
 #endif //PLANTWATERINGSYSTEM_CONFIGURATION_H

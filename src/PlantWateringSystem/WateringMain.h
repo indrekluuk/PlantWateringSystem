@@ -9,6 +9,7 @@
 #include "Screen.h"
 #include "Button.h"
 #include "MoistureSensors.h"
+#include "Coils.h"
 
 
 class WateringMain {
@@ -17,6 +18,7 @@ class WateringMain {
     Screen screen;
     Button button;
     MoistureSensors moistureSensors;
+    Coils coils;
 
 public:
     WateringMain();
